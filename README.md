@@ -6,7 +6,7 @@ Busca CPFs no Portal da Transparência usando uma máscara. Você passa os dígi
 
 O CPF tem 11 dígitos: os 9 primeiros são o número base e os 2 últimos são verificadores matemáticos. A máscara usa `X` nos dígitos desconhecidos dos 9 primeiros. Os dois últimos (`-XX`) são sempre calculados pelo programa, não precisam estar na máscara.
 
-Exemplo: `XXX.332.217-XX` → testa `001.332.217` até `999.332.217`, calcula os verificadores de cada candidato e consulta o Portal da Transparência.
+Exemplo: `XXX.342.422-XX` → testa `001.342.422` até `999.342.422`, calcula os verificadores de cada candidato e consulta o Portal da Transparência.
 
 Por padrão tenta usar a API direta do portal (bem mais rápido). Se não estiver disponível, cai automaticamente pro Playwright com Chrome.
 
@@ -34,7 +34,7 @@ python cpf_finder.py "XXX.452.217-XX"
 python cpf_finder.py "XXX.332.217-XX" --workers 10
 ```
 
-O resultado é salvo num `.txt` com o mesmo nome da máscara. Ex: `XXX.332.217-XX.txt`.
+O resultado é salvo num `.txt` com o mesmo nome da máscara. Ex: `XXX.342.422-XX.txt`.
 
 ## Saída
 
